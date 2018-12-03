@@ -1,7 +1,7 @@
 # ***Résumé***
 
 ### 基本信息
-&nbsp;&nbsp; 江苏南通 &nbsp; | &nbsp; 26 男 &nbsp; | &nbsp; 江南大学(211)本科 生物技术 &nbsp; | &nbsp; nijialun888@hotmail.com
+&nbsp;&nbsp;&nbsp; 江苏南通 &nbsp; | &nbsp; 26 男 &nbsp; | &nbsp; 江南大学(211)本科 生物技术 &nbsp; | &nbsp; nijialun888@hotmail.com
 
 ### 技能
   ##### 英语
@@ -18,7 +18,7 @@
   + 略懂Python语言，在Coursera网站上学过两门Python相关课程
 
 ### 项目经验
-- [我的Github](https://github.com/Glen-Ni)
+&nbsp;&nbsp;&nbsp; [我的Github](https://github.com/Glen-Ni)
 
 ### 个人经历
 - 江南大学毕业 2014
