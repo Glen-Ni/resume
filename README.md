@@ -1,7 +1,7 @@
 # ***Résumé***
 
 ### 基本信息
-  江苏南通 &nbsp; |  26 男 &nbsp; | &nbsp; 江南大学(211)本科 生物技术 &nbsp; | &nbsp; nijialun888@hotmail.com
+  江苏南通 &nbsp; | &nbsp; 26 男 &nbsp; | &nbsp; 江南大学(211)本科 生物技术 &nbsp; | &nbsp; nijialun888@hotmail.com
 
 ### 技能
   ##### 英语
