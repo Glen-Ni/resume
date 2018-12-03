@@ -18,7 +18,7 @@
   + 略懂Python语言，在Coursera网站上学过两门Python相关课程
 
 ### 项目经验
-- (我的Github)[https://github.com/Glen-Ni]
+- [我的Github](https://github.com/Glen-Ni)
 
 ### 个人经历
 - 江南大学毕业 2014
