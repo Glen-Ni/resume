@@ -4,10 +4,10 @@
 &nbsp;&nbsp;&nbsp; 江苏南通 &nbsp; | &nbsp; 26 男 &nbsp; | &nbsp; 江南大学(211)本科 生物技术 &nbsp; | &nbsp; nijialun888@hotmail.com
 
 ### 技能
-  ##### 英语
+##### 英语
   + CET-6 (507分) | 托福 96（阅读29，听力24，口语23，写作20）| GRE  320（153+167）
   + 扇贝1000+天打卡学习
-  ##### 计算机技术
+##### 计算机技术
   + HTML、CSS 编写语义化的代码，完成较复杂的布局，熟悉Stylus、Less等CSS预处工具
   + 熟悉JS与ES6语法。熟悉DOM、BOM操作，熟悉闭包原理，面向对象JS编程，理解原型链和继承机制
   + 熟悉jQuery框架，掌握jQuery与DOM操作及事件处理，理解jQuery实现原理、底层机制
