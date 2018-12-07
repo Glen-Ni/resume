@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/api/register" method="GET">
+    <div class="name">
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" placeholder="用户名">
+    </div>
+    <div class="password">
+      <label for="password ">密码：</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div class="sex">
+      <label>性别：</label>
+      <input type="radio" id name="sex" value="男" checked>男
+      <input type="radio" id name="sex" value="女">女
+    </div>
+    <div class="sex-orientation">
+      <label>取向：</label>
+      <input type="radio" name="sex-orientation" value="男">男
+      <input type="radio" name="sex-orientation" value="女" checked>女
+    </div>
+    <div class="hobbies">
+      <label>爱好：</label>
+      <input type="checkbox" name="hobbies" value="dota">dota
+      <input type="checkbox" name="hobbies" value="travel" checked>旅游
+      <input type="checkbox" name="hobbies" value="pets" checked>宠物
+    </div>
+    <div class="comments">
+      <label for="comments">评论：</label>
+      <textarea name="comments" id="comments" cols="30" rows="10" placeholder="ddd"></textarea>
+    </div>
+    <div class="car">
+      <label for="car">我的car：</label>
+      <select name="car" id="car">
+        <option value="萨博">萨博</option>
+        <option value="奔驰">奔驰</option>
+        <option value="奥迪双钻">奥迪双钻</option>
+      </select>
+      <input type="submit">
+    </div>
+  </form>
+</body>
+</html>
