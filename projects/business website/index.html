@@ -19,9 +19,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        background: #000
-          url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg)
-          no-repeat center center;
+        background: #000 url(./img/header-bg.jpg) no-repeat center center;
         background-size: cover;
         text-align: center;
       }
@@ -59,39 +57,28 @@
         font-size: 30px;
       }
       header .intro > h1 {
-        margin-top: 20px;
+        margin: 20px 0 30px;
         font-size: 50px;
       }
-      header .button {
-        display: inline-block;
-        margin-top: 40px;
-        width: 200px;
-        height: 60px;
-        font-size: 20px;
-        line-height: 60px;
-        background-color: rgba(254, 209, 54);
-        border-radius: 3px;
-        color: #fff;
-      }
-      header .button:hover {
-        background-color: rgb(254, 197, 3);
-      }
+
       section {
-        margin-top: 30px;
+        padding: 80px 0;
         text-align: center;
       }
       section > h2 {
         font-size: 40px;
+        margin-bottom: 15px;
       }
       section > i {
         color: #888;
       }
-      section > ul > li {
+      section.service > ul > li {
+        margin-top: 40px;
         float: left;
         width: 33.33%;
         padding: 15px;
       }
-      section .iconfont {
+      section.service > ul .iconfont {
         display: inline-block;
         width: 80px;
         height: 80px;
@@ -101,6 +88,68 @@
         background-color: rgb(254, 209, 54);
         border-radius: 50%;
       }
+      section.service li h3 {
+        margin: 16px;
+      }
+
+      section.portfolio {
+        background-color: #f7f7f7;
+      }
+      section.portfolio figure {
+        float: left;
+        width: calc(33% - 20px);
+        margin: 10px;
+        background-color: #fff;
+      }
+      section.portfolio a {
+        display: block; /* 要不然下面的伪元素撑不开 */
+        position: relative; /* 加遮罩当然是相对自己定位 */
+        height: 200px;
+      }
+      section.portfolio a:hover::before {
+        content: '+';
+        position: absolute;
+        top: 0; /* width: 100%; height: 100%; 也行 */
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        font-size: 80px;
+        line-height: 200px;
+        background-color: rgba(254, 209, 54, 0.9);
+      }
+      section.portfolio img {
+        width: 100%;
+      }
+      section.portfolio h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      section.portfolio i {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      section.team {
+        background-color: #f7f7f7;
+      }
+      section.team figure {
+        float: left;
+        width: calc(33.33% - 20px);
+        margin: 10px;
+      }
+      section.team img {
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      section.team h4 {
+      }
+
+      footer {
+        background: url(img/);
+      }
     </style>
   </head>
   <body>
@@ -109,7 +158,7 @@
         <a href="#" class="logo">Start Project</a>
         <ul class="nav">
           <li><a href="#">Services</a></li>
-          <li><a href="#">Family</a></li>
+          <li><a href="#">portfolio</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Team</a></li>
           <li><a href="#">Contact</a></li>
@@ -121,8 +170,8 @@
         <a href="#" class="button">TELL ME MORE</a>
       </div>
     </header>
-    <main class="layout">
-      <section class="service">
+    <main>
+      <section class="service layout clearfix">
         <h2>SERVICES</h2>
         <i>I don't know what to write in this place</i>
         <ul>
@@ -152,14 +201,76 @@
           </li>
         </ul>
       </section>
-      <section class="family">
-        <h2>FAMILY</h2>
+      <section class="portfolio">
+        <h2>PORTFOLIO</h2>
+        <i>something about portfolio</i>
+        <div class="container layout clearfix">
+          <figure>
+            <a href=""><img src="img/portfolio/roundicons.png" alt=""/></a>
+            <h4>Round Icons</h4>
+            <i>Graphic Design</i>
+          </figure>
+          <figure>
+            <a href=""
+              ><img src="img/portfolio/startup-framework.png" alt=""
+            /></a>
+            <h4>Startup Frameworkd</h4>
+            <i>Website Design</i>
+          </figure>
+          <figure>
+            <a href=""><img src="img/portfolio/treehouse.png" alt=""/></a>
+            <h4>Treehouse</h4>
+            <i>Website Design</i>
+          </figure>
+          <figure>
+            <a href=""><img src="img/portfolio/golden.png" alt=""/></a>
+            <h4>Golden</h4>
+            <i>Website Design</i>
+          </figure>
+          <figure>
+            <a href=""><img src="img/portfolio/escape.png" alt=""/></a>
+            <h4>Escape</h4>
+            <i>Website Design</i>
+          </figure>
+          <figure>
+            <a href=""><img src="img/portfolio/dreams.png" alt=""/></a>
+            <h4>Dreams</h4>
+            <i>Website Design</i>
+          </figure>
+        </div>
       </section>
       <section class="about">
         <h2>ABOUT US</h2>
+        <i>Lorem ipsum dolor sit amet consectetur.</i>
       </section>
       <section class="team">
-        <h2>TEAM</h2>
+        <h2>OUR AMAZING TEAM</h2>
+        <i>Lorem ipsum dolor sit amet consectetur.</i>
+        <div class="layout clearfix">
+          <figure>
+            <img src="img/team/5.jpg" alt="" />
+            <h4>Kay Garland</h4>
+            <p>Lead Developer</p>
+            <span></span> <span></span> <span></span>
+          </figure>
+          <figure>
+            <img src="img/team/6.jpg" alt="" />
+            <h4>Larry Parker</h4>
+            <p>Lead Designer</p>
+            <span></span> <span></span> <span></span>
+          </figure>
+          <figure>
+            <img src="img/team/7.jpg" alt="" />
+            <h4>Diana Pertersen</h4>
+            <p>Lead Marketer</p>
+            <span></span> <span></span> <span></span>
+          </figure>
+          <P
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+            eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam
+            corporis ea, alias ut unde.</P
+          >
+        </div>
       </section>
     </main>
     <footer></footer>

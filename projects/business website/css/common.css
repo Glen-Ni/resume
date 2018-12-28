@@ -21,8 +21,21 @@ ul {
   width: 900px;
   margin: 0 auto;
 }
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 60px;
+  background-color: rgba(254, 209, 54);
+  border-radius: 3px;
+  color: #fff;
+}
+.button:hover {
+  background-color: rgb(254, 197, 3);
+}
 body {
   font: 14px/1.5 Arial;
-  background-color: #eee;
+  background-color: #fff;
   color: #444;
 }
