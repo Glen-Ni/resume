@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="http://at.alicdn.com/t/font_988848_a84eb4ur8jn.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
       html,
       body {
@@ -23,15 +27,18 @@
         background-size: cover;
         text-align: center;
       }
+      header nav {
+        margin: 0 30px;
+      }
       header .logo {
-        margin-top: 20px;
         float: left;
+        margin-top: 20px;
         font-size: 24px;
         color: rgb(254, 209, 54);
       }
       header .nav {
-        margin-top: 20px;
         float: right;
+        margin-top: 20px;
       }
       header .nav li {
         float: left;
@@ -72,13 +79,13 @@
       section > i {
         color: #888;
       }
-      section.service > ul > li {
+      .service > ul > li {
         margin-top: 40px;
         float: left;
         width: 33.33%;
         padding: 15px;
       }
-      section.service > ul .iconfont {
+      .service > ul .iconfont {
         display: inline-block;
         width: 80px;
         height: 80px;
@@ -88,25 +95,25 @@
         background-color: rgb(254, 209, 54);
         border-radius: 50%;
       }
-      section.service li h3 {
+      .service li h3 {
         margin: 16px;
       }
 
-      section.portfolio {
+      .portfolio {
         background-color: #f7f7f7;
       }
-      section.portfolio figure {
+      .portfolio figure {
         float: left;
         width: calc(33% - 20px);
         margin: 10px;
         background-color: #fff;
       }
-      section.portfolio a {
+      .portfolio a {
         display: block; /* 要不然下面的伪元素撑不开 */
         position: relative; /* 加遮罩当然是相对自己定位 */
         height: 200px;
       }
-      section.portfolio a:hover::before {
+      .portfolio a:hover::before {
         content: '+';
         position: absolute;
         top: 0; /* width: 100%; height: 100%; 也行 */
@@ -118,43 +125,173 @@
         line-height: 200px;
         background-color: rgba(254, 209, 54, 0.9);
       }
-      section.portfolio img {
+      .portfolio img {
         width: 100%;
       }
-      section.portfolio h4 {
+      .portfolio h4 {
         font-size: 18px;
         font-weight: bold;
         margin-top: 20px;
       }
-      section.portfolio i {
+      .portfolio i {
         display: block;
         margin-bottom: 20px;
       }
 
-      section.team {
+      .about li {
+        position: relative;
+        margin: 30px;
+      }
+      .about li::before {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        height: 333px;
+        width: 2px;
+        background-color: #f1f1f1;
+        /* z-index: 10; */
+      }
+      .about li:last-of-type::before {
+        height: 0px;
+      }
+      .about li::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .about li:last-of-type {
+        height: 130px;
+      }
+      .about img,
+      .about p {
+        position: absolute;
+        left: calc(50% - 65px);
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 8px solid #f1f1f1;
+        background-color: rgb(254, 209, 54);
+      }
+      .about p {
+        padding: 24px 20px;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .about li:nth-child(odd) dl {
+        float: left;
+        margin-left: 70px;
+        width: 30%;
+        text-align: right;
+      }
+      .about li:nth-child(even) dl {
+        float: right;
+        margin-right: 70px;
+        width: 30%;
+        text-align: left;
+      }
+      .about dt {
+        color: #333;
+        font: bold 18px/1.5 Arial;
+      }
+      .about .about-title {
+        color: #333;
+        font: bold 18px/1.5 Arial;
+      }
+      .about .about-text {
+        margin-top: 10px;
+        color: #888;
+        font: 16px/1.5 Arial;
+      }
+
+      .team {
         background-color: #f7f7f7;
       }
-      section.team figure {
+      .team figure {
         float: left;
         width: calc(33.33% - 20px);
         margin: 10px;
       }
-      section.team img {
+      .team img {
         padding: 10px;
         border-radius: 50%;
         background-color: #fff;
       }
-      section.team h4 {
+      .team h4 {
+        color: #000;
+        font-size: 18px;
       }
-
+      .contact {
+        color: #fff;
+        background: #111 url(img/map-image.png) no-repeat center center;
+        background-size: cover;
+      }
+      .contact form {
+        margin-top: 30px;
+      }
+      .contact .left {
+        float: left;
+        width: 45%;
+        margin-left: 30px;
+      }
+      .contact .right {
+        float: right;
+        width: 45%;
+        margin-right: 30px;
+      }
+      .contact input,
+      .contact textarea {
+        display: inline-block;
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+        font: 700 14px/1.5 Arial;
+        color: red;
+        border-radius: 3px;
+        border-width: 0;
+      }
+      .contact input {
+        height: 60px;
+      }
+      .contact textarea {
+        height: 220px;
+        margin-right: 40px;
+      }
+      /* input::-webkit-input-placeholder {
+        font: 700 20px/1.5 Arial;
+        color:red;
+      }
+      textarea::-webkit-input-placeholder {
+        font: 700 20px/1.5 Arial;
+        color:red;
+      } */
+      .contact .button {
+        margin-top: 30px;
+        border-width: 0;
+      }
       footer {
-        background: url(img/);
+        width: 900px;
+        margin: 20px;
+      }
+      footer div {
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+        vertical-align: middle;
+      }
+      footer a {
+        display: inline-block;
+        margin: 10px;
+        color: rgb(254, 209, 54);
+      }
+      footer a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
     <header>
-      <nav class="clearfix layout">
+      <nav class="clearfix">
         <a href="#" class="logo">Start Project</a>
         <ul class="nav">
           <li><a href="#">Services</a></li>
@@ -242,6 +379,61 @@
       <section class="about">
         <h2>ABOUT US</h2>
         <i>Lorem ipsum dolor sit amet consectetur.</i>
+        <ul class="layout">
+          <li>
+            <img src="img/about/1.jpg" alt="" />
+            <dl>
+              <dt>2009-2011</dt>
+              <dd class="about-title">Our Humble Beginnings</dd>
+              <dd class="about-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                ut voluptatum eius sapiente, totam reiciendis temporibus qui
+                quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
+                dolore laudantium consectetur!
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <img src="img/about/2.jpg" alt="" />
+            <dl>
+              <dt>MARCH 2011</dt>
+              <dd class="about-title">An Agency is Born</dd>
+              <dd class="about-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                ut voluptatum eius sapiente, totam reiciendis temporibus qui
+                quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
+                dolore laudantium consectetur!
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <img src="img/about/3.jpg" alt="" />
+            <dl>
+              <dt>DECEMBER 2012</dt>
+              <dd class="about-title">Transition to Full Service</dd>
+              <dd class="about-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                ut voluptatum eius sapiente, totam reiciendis temporibus qui
+                quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
+                dolore laudantium consectetur!
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <img src="img/about/4.jpg" alt="" />
+            <dl>
+              <dt>JULY 2014</dt>
+              <dd class="about-title">Phase Two Expansion</dd>
+              <dd class="about-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                ut voluptatum eius sapiente, totam reiciendis temporibus qui
+                quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
+                dolore laudantium consectetur!
+              </dd>
+            </dl>
+          </li>
+          <li><p>BE PART OF OUR STORY!</p></li>
+        </ul>
       </section>
       <section class="team">
         <h2>OUR AMAZING TEAM</h2>
@@ -251,28 +443,74 @@
             <img src="img/team/5.jpg" alt="" />
             <h4>Kay Garland</h4>
             <p>Lead Developer</p>
-            <span></span> <span></span> <span></span>
+            <div class="social-btn">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
           </figure>
           <figure>
             <img src="img/team/6.jpg" alt="" />
             <h4>Larry Parker</h4>
             <p>Lead Designer</p>
-            <span></span> <span></span> <span></span>
+            <div class="social-btn">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
           </figure>
           <figure>
             <img src="img/team/7.jpg" alt="" />
             <h4>Diana Pertersen</h4>
             <p>Lead Marketer</p>
-            <span></span> <span></span> <span></span>
+            <div class="social-btn">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
           </figure>
           <P
             >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
             eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam
-            corporis ea, alias ut unde.</P
+            corporis ea, alias ut undeptatum eius sapiente, totam reiciendis
+            temporibus qui quibusdam!</P
           >
         </div>
       </section>
+      <section class="client layout">
+        <a href=""><img src="img/logos/creative-market.jpg" alt=""/></a>
+        <a href=""><img src="img/logos/designmodo.jpg" alt=""/></a>
+        <a href=""><img src="img/logos/envato.jpg" alt=""/></a>
+        <a href=""><img src="img/logos/themeforest.jpg" alt=""/></a>
+      </section>
+      <section class="contact">
+        <h2>CONTACT US</h2>
+        <i>Lorem ipsum dolor sit amet consectetur.</i>
+        <form action="" method="get">
+          <div class="layout clearfix">
+            <div class="left">
+              <input type="text" name="username" placeholder="YOUR NAME *" />
+              <input type="email" name="email" placeholder="YOUR E-MAIL *" />
+              <input type="tel" name="phone" placeholder="YOUR PHONE *" />
+            </div>
+            <div class="right">
+              <textarea name="message" placeholder="Your Message *"></textarea>
+            </div>
+          </div>
+          <button href="#" class="button">SEND MRSSAGE</button>
+        </form>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="copyright">Copyright © Your Website 2018</div>
+      <div class="social-btn">
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-linkedin"></i></a>
+      </div>
+      <div class="policy">
+        <a href="">Privacy Policy</a> <a href="">Terms of Use</a>
+      </div>
+    </footer>
   </body>
 </html>
