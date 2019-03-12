@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>珠宝demo-jq事件</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .clearfix::after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+      .jewelry {
+        width: 780px;
+        margin: 0 auto;
+      }
+      .jewelry .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+        transition: all 0.3s;
+        opacity: 0;
+      }
+      .jewelry .cover button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .jewelry figure.hover .cover {
+        opacity: 1;
+      }
+      .jewelry h2 {
+        margin-left: 10px;
+      }
+      .jewelry figure {
+        position: relative;
+        float: left;
+        margin: 10px;
+        width: 240px;
+        height: 300px;
+        text-align: center;
+        padding: 19px;
+        border: 1px solid #ccc;
+      }
+      .jewelry h4 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+      .jewelry span {
+        color: #c81623;
+      }
+      .jewelry button {
+        display: inline-block;
+        margin: 10px;
+        padding: 8px 14px;
+        color: #c81623;
+        background-color: #fff;
+        border: 1px solid #c81623;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+    <section class="jewelry">
+      <h2>珠宝首饰</h2>
+      <div class="container clearfix">
+      </div>
+      <div class="control">
+        <button class="add">添加</button><button class="edit">编辑</button>
+      </div>
+    </section>
+    <script>
+      var jewelry = [
+        '蓝宝石',
+        '祖母绿',
+        '路路通吊坠',
+        '珂兰黄金手',
+        '藏美千足金',
+        '玛瑙翡翠',
+        '时来运转吊坠',
+        '钻石',
+        '磷叶石',
+        '透绿柱石',
+        '柱星叶石',
+        '南极石',
+        '金刚老师',
+        '圆粒金刚石',
+        '摩根石'
+      ]
+      function random(bottom, top) {
+        return Math.floor(Math.random() * (top - bottom + 1)) + bottom
+      }
+
+      function getProdHtml(data) {
+        return `<figure>
+                  <div class="cover">
+                    <button class="delete">删除</button>
+                  </div>
+                  <a href="#"
+                    ><img src=${data.img} alt=""
+                  /></a>
+                  <h4>${data.name}</h4>
+                  <span>${data.price}</span>
+                </figure>`
+      }
+      function getData() {
+        return {
+          img: `https://picsum.photos/200/200/?image=${random(1, 100)}`,
+          name: jewelry[random(0, 14)],
+          price: `￥${random(1000, 10000)}.00`
+        }
+      }
+      $('button.add').on('click', function() {
+        $('figure').removeClass('hover')
+        for (var i = 0; i < 3; i++) {
+          $('.container').append(getProdHtml(getData()))
+        }
+      })
+      $('button.edit').on('click', function(e) {
+        $('figure').toggleClass('hover')
+      })
+      $('.container').on('click', 'button.delete',function(e) {
+        $(this)
+          .parents('figure')
+          .remove()
+      })
+      $('button.add').trigger('click')
+    </script>
+  </body>
+</html>
