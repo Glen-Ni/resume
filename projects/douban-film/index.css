@@ -6,7 +6,7 @@
 
 a{
   text-decoration: none;
-  color: #888;
+  color: #777;
 }
 
 body{
@@ -18,16 +18,19 @@ body{
 
 main {
   height: calc(100vh - 50px);
-  overflow:scroll;
-  -webkit-overflow-scrolling: touch;
+
 }
 main>section {
   display:none;
+  height: 100%;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
 }
 main>section:first-child {
   display:block;
 }
 .item {
+  position: relative;
   padding: 10px;
   border-bottom: 1px solid #ccc;
 }
@@ -38,6 +41,11 @@ main>section:first-child {
   color: #333;
   font-size: 16px;
 }
+.item .rank {
+  position: absolute;
+  top:13px;
+  right:20px;
+}
 .item .cover img{
   width: 70px;
   /* height: 80px; */
@@ -47,16 +55,17 @@ main>section:first-child {
   padding-left: 10px;
 }
 .item .extra{
-  margin-top: 3px;
+  margin-top: 5px;
 }
 .item .score {
   color: #f2805c;               
 }
 
-.loading{
+.loading, .finished{
   padding: 5px;
   text-align: center;
-  display: none
+  color: #777;
+  display: none;
 }
 .loading .iconfont {
   display: inline-block;

@@ -17,109 +17,111 @@
       <section class="top250">
         <div class="container"></div>
         <div class="loading"><span class="iconfont icon-loading"></span></div>
+        <div class="finished">没了没了···</div>
       </section>
       <section class="us">2</section>
       <section class="search">3</section>
     </main>
     <footer>
       <div class="active">
-        <span class="iconfont icon-top-rated"></span><span>top50</span>
+        <span class="iconfont icon-top-rated"></span><span>top250</span>
       </div>
       <div><span class="iconfont icon-us"></span><span>北美</span></div>
       <div><span class="iconfont icon-search"></span><span>搜索</span></div>
     </footer>
     <script>
-      var data
-      var index = 0
-      $('footer>div').on('click', function(e) {
-        var index = $(this).index()
-        $(this)
-          .addClass('active')
-          .siblings()
-          .removeClass('active')
-        $('main>section')
-          .eq(index)
-          .fadeIn()
-          .siblings()
-          .hide()
-      })
-      var loading = false
-      function init() {
-        if (loading) return
-        loading = true
-        $('.loading').show()
-        $.ajax({
-          url: 'https://api.douban.com/v2/movie/top250',
-          type: 'GET',
-          data: {
-            start: index,
-            count: 20
-          },
-          dataType: 'jsonp'
-        })
-          .done(function(ret) {
-            console.log(ret)
-            $('.top250 .container').append(getHtml(ret.subjects))
-            index += 20
-            console.log(index)
-          })
-          .fail(function() {
-            console.log('error...')
-          })
-          .always(function() {
-            loading = false
-            $('.loading').hide()
-          })
-      }
-      init()
+      // var data
+      // var index = 0
+      // $('footer>div').on('click', function(e) {
+      //   var index = $(this).index()
+      //   $(this)
+      //     .addClass('active')
+      //     .siblings()
+      //     .removeClass('active')
+      //   $('main>section')
+      //     .eq(index)
+      //     .fadeIn()
+      //     .siblings()
+      //     .hide()
+      // })
+      // var loading = false
+      // function init() {
+      //   if (loading) return
+      //   loading = true
+      //   $('.loading').show()
+      //   $.ajax({
+      //     url: 'https://api.douban.com/v2/movie/top250',
+      //     type: 'GET',
+      //     data: {
+      //       start: index,
+      //       count: 20
+      //     },
+      //     dataType: 'jsonp'
+      //   })
+      //     .done(function(ret) {
+      //       console.log(ret)
+      //       $('.top250 .container').append(getHtml(ret.subjects))
+      //       index += 20
+      //       console.log(index)
+      //     })
+      //     .fail(function() {
+      //       console.log('error...')
+      //     })
+      //     .always(function() {
+      //       loading = false
+      //       $('.loading').hide()
+      //     })
+      // }
+      // init()
 
-      function getHtml(data) {
-        var html = ''
-        data.forEach(function(item) {
-          html += `
-          <div class="item">
-            <a href="${item.alt}">
-              <div class="cover">
-                <img
-                  src="${item.images.small}"
-                />
-              </div>
-              <div class="detail">
-                <h2>${item.title}</h2>
-                <div class="extra"><span class="score">${
-                  item.rating.average
-                }</span> / ${item.collect_count}收藏</div>
-                <div class="extra">${item.year} / ${item.genres.join(
-            '、'
-          )}</div>
-                <div class="extra">导演: ${item.directors.map(
-                  d => d.name
-                )}</div>
-                <div class="extra">主演: ${item.casts.map(d => d.name)}</div>
-              </div>
-            </a>
-          </div>
-          `
-        })
-        return html
-      }
-      $('main').scroll(function() {
-        if (
-          $('.top250').height() - 10 <=
-          $('main').scrollTop() + $('main').height()
-        ) {
-          init()
-        }
-      })
+      // function getHtml(data) {
+      //   var html = ''
+      //   data.forEach(function(item) {
+      //     html += `
+      //     <div class="item">
+      //       <a href="${item.alt}">
+      //         <div class="cover">
+      //           <img
+      //             src="${item.images.small}"
+      //           />
+      //         </div>
+      //         <div class="detail">
+      //           <h2>${item.title}</h2>
+      //           <div class="extra"><span class="score">${
+      //             item.rating.average
+      //           }</span> / ${item.collect_count}收藏</div>
+      //           <div class="extra">${item.year} / ${item.genres.join(
+      //       '、'
+      //     )}</div>
+      //           <div class="extra">导演: ${item.directors.map(
+      //             d => d.name
+      //           )}</div>
+      //           <div class="extra">主演: ${item.casts.map(d => d.name)}</div>
+      //         </div>
+      //       </a>
+      //     </div>
+      //     `
+      //   })
+      //   return html
+      // }
+      // $('main').scroll(function() {
+      //   if (
+      //     $('.top250').height() - 10 <=
+      //     $('main').scrollTop() + $('main').height()
+      //   ) {
+      //     init()
+      //   }
+      // })
 
-
+      // app~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       var app = {
         init: function() {
           this.$tabs = $('footer>div')
           this.$panels = $('section')
-
           this.bind()
-          this.start()
+          top250.init()
+          // usBox.init()
+          // search.init()
         },
         bind: function() {
           var _this = this
@@ -134,11 +136,78 @@
               .siblings()
               .hide()
           })
+        }
+      }
+
+      // top250~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      var top250 = {
+        init: function() {
+          this.$innerBox = $('.top250 .container')
+          this.$section = $('.top250')
+          this.isloading = false
+          this.isfinished = false
+          this.index = 0
+          this.count = 100
+          this.bind()
+          this.start()
         },
-        start: function() {},
+        bind: function() {
+          var _this = this
+          this.$section.scroll(function() {
+            if (_this.isfinished && _this.isToBottom()) {
+              $('.finished').show()
+              return
+            }
+            if (
+              _this.$innerBox.height() - 10 <=
+              _this.$section.scrollTop() + _this.$section.height()
+            ) {
+              _this.start()
+            }
+          })
+        },
+        start: function() {
+          var _this = this
+          this.getData(function(data) {
+            _this.render(data)
+          })
+        },
+        getData: function(callback) {
+          var _this = this
+          if (this.isloading || this.isfinished) return
+          this.isloading = true
+          $('.loading').show()
+          $.ajax({
+            url: 'https://api.douban.com/v2/movie/top250',
+            type: 'GET',
+            data: {
+              start: _this.index,
+              count: _this.count
+            },
+            dataType: 'jsonp'
+          })
+            .done(function(data) {
+              callback(data)
+              console.log(data)
+              _this.index += _this.count
+              if (_this.index > data.total) {
+                _this.isfinished = true
+              }
+            })
+            .fail(function() {
+              console.log('error...')
+            })
+            .always(function() {
+              console.log(_this.isloading)
+              _this.isloading = false
+              $('.loading').hide()
+            })
+        },
         render: function(data) {
           var html = ''
-          data.forEach(function(item){
+          var _this = this
+          var rank = this.index + 1
+          data.subjects.forEach(function(item) {
             html += `
             <div class="item">
               <a href="${item.alt}">
@@ -147,39 +216,37 @@
                 </div>
                 <div class="detail">
                   <h2>${item.title}</h2>
-                  <div class="extra"><span class="score">${item.rating.average}</span> / ${item.collect_count}收藏</div>
-                  <div class="extra">${item.year} / ${item.genres.join('、')}</div>
-                  <div class="extra">导演: ${item.directors.map(d => d.name)}</div>
-                  <div class="extra">主演: ${item.casts.map(d => d.name)}</div>
+                  <div class="rank">排名：${rank}</div>
+                  <div class="extra"><span class="score">${
+                    item.rating.average
+                  }</span> / ${item.collect_count}收藏</div>
+                  <div class="extra">${item.year} / ${item.genres.join(
+              '、'
+            )}</div>
+                  <div class="extra">导演：${item.directors
+                    .map(d => d.name)
+                    .join('、')}</div>
+                  <div class="extra">主演：${item.casts
+                    .map(d => d.name)
+                    .join('、')}</div>
                 </div>
               </a>
             </div>
             `
+            rank++
           })
+          $('.top250 .container').append(html)
+          console.log(_this.index)
         },
-        setData: function() {}
-      }
-      var top250 ={
-        init: function(){
-          this.$top250=$('.top250')
-          this.bind()
-          this.start()
-        },
-        bind: function(){},
-        start: function(){
-          var _this = this
-          this.getData(function(data){
-            _this.render(data)
-          })
-        },
-        getData: function(callback){},
-        render: function(data){
-
-        },
-        isToBottom: function(){
-          return
+        isToBottom: function() {
+          var isbottom =
+            this.$innerBox.height() <=
+            this.$section.height() + this.$section.scrollTop() + 10
+          console.log(isbottom)
+          return isbottom
         }
       }
+      app.init()
     </script>
   </body>
 </html>
