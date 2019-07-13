@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 这里content使得移动端字体正常 -->
+    <title>resume</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        font-size: 14px;
+        font-family: 'Arial';
+        color: #666;
+      }
+      body {
+        background: #efefef;
+      }
+      .layout {
+        display: flex;
+        max-width: 1000px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16),
+          0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+
+      header {
+        width: 100%;
+        height: 120px;
+        background-color: #3c3c3c;
+      }
+      header .name {
+        margin-top: 48px;
+        margin-left: 220px;
+        color: #ccc;
+      }
+      header h1 {
+        font-size: 26px;
+        color: #fff;
+      }
+      aside {
+        position: relative;
+        width: 220px;
+        padding-top: 90px;
+        background-color: #fff;
+      }
+      aside .avatar {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: -75px;
+      }
+      aside .avatar img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+      }
+
+      section {
+        border-bottom: 1px solid #ccc;
+        margin: 24px 18px 0 18px;
+        padding-bottom: 20px;
+      }
+      section h2 {
+        color: #2096da;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .basic-info .item {
+        display: flex;
+      }
+      .basic-info .item span:first-child {
+        display: flex;
+        width: 80px;
+      }
+      .basic-info .item span:first-child::after {
+        margin-left: auto;
+        content: ':';
+      }
+      .basic-info .item span:last-child {
+        padding-left: 10px;
+        flex: 1;
+      }
+      
+      .skills .item {
+        display: flex;
+        align-items: center;
+      }
+      .skills .keyword{
+        width: 70px;
+      }
+      .skills .progress{
+        flex: 1;
+        height: 6px;
+        background-color: #ccc;
+        border-radius: 3px;
+      }
+      .skills .progress i{
+        display: block;
+        border-radius: 3px;
+        height: 6px;
+        background-color: #555;
+      }
+
+      main {
+        flex: 1;
+        min-height: calc(100vh - 140px);
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout" id="page">
+      <header>
+        <div class="name">
+          <h1>小伙子</h1>
+          <p>应聘前端工程师</p>
+        </div>
+      </header>
+      <aside>
+        <div class="avatar">
+          <img src="./images/四代目.jpg" alt="rua" />
+        </div>
+        <section>
+          <h2>基础信息</h2>
+          <div class="basic-info">
+            <div class="item">
+              <span>学历</span>
+              <span>本科</span>
+            </div>
+            <div class="item">
+              <span>工作经验</span>
+              <span>一年</span>
+            </div>
+            <div class="item">
+              <span>意向薪资</span>
+              <span>1元</span>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>专业技能</h2>
+          <div class="skills">
+            <div class="item">
+              <span class="keyword">HTML</span>
+              <span class="progress"><i style="width: 60%"></i></span>
+            </div>
+            <div class="item">
+              <span class="keyword">CSS</span>
+              <span class="progress"><i style="width: 70%"></i></span>
+            </div>
+            <div class="item">
+              <span class="keyword">Vue</span>
+              <span class="progress"><i style="width: 50%"></i></span>
+            </div>
+            <div class="item">
+              <span class="keyword">React</span>
+              <span class="progress"><i style="width: 60%"></i></span>
+            </div>
+            <div class="item">
+              <span class="keyword">Node.js</span>
+              <span class="progress"><i style="width: 40%"></i></span>
+            </div>
+          </div>
+        </section>
+      </aside>
+      <main>frontend</main>
+    </div>
+  </body>
+</html>
