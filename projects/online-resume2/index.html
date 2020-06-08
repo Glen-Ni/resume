@@ -11,7 +11,7 @@
         padding: 0;
         line-height: 1.5;
         font-size: 14px;
-        font-family: 'Arial';
+        font-family: "Arial";
         color: #555;
       }
       body {
@@ -27,8 +27,7 @@
         margin: 0 auto;
         margin-top: 10px;
         margin-bottom: 10px;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16),
-          0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
       }
 
       header {
@@ -44,6 +43,10 @@
       header h1 {
         font-size: 26px;
         color: #fff;
+      }
+      header h1 span {
+        font-style: 20px;
+        color: #ddd;
       }
       header p {
         color: #999;
@@ -64,7 +67,7 @@
         width: 146px;
         height: 150px;
         border-radius: 50%;
-        object-fit:cover
+        object-fit: cover;
       }
 
       section {
@@ -139,6 +142,10 @@
         border-left: 1px solid #ccc;
       }
 
+      main .about p {
+        padding-top: 5px;
+      }
+
       @media (max-width: 768px) {
         header {
           padding-bottom: 50px;
@@ -165,7 +172,7 @@
     <div class="layout" id="page">
       <header>
         <div class="name">
-          <h1>倪嘉伦</h1>
+          <h1>倪嘉伦 <span>（简历更新中，域名认证中，部分预览暂时无效）</span></h1>
           <p>应聘前端工程师</p>
         </div>
       </header>
@@ -177,11 +184,12 @@
           <h2>基础信息</h2>
           <div class="basic-info">
             <ul>
-              <li>年龄：27</li>
+              <li>年龄：28</li>
               <li>学历：江南大学本科(211)</li>
-              <li>前端经验：一年半</li>
-              <li>意向薪资：6000~12000</li>
-              <li>城市：南通、上海、杭州</li>
+              <li>前端经验：两年半</li>
+              <li>求职状态：在职、月内到岗</li>
+              <li>意向薪资：7000~10000</li>
+              <li>城市：南通</li>
             </ul>
           </div>
         </section>
@@ -190,27 +198,27 @@
           <div class="skills">
             <div class="item">
               <span class="keyword">HTML</span>
-              <span class="progress"><i style="width: 70%"></i></span>
+              <span class="progress"><i style="width: 85%;"></i></span>
             </div>
             <div class="item">
               <span class="keyword">CSS</span>
-              <span class="progress"><i style="width: 75%"></i></span>
+              <span class="progress"><i style="width: 80%;"></i></span>
             </div>
             <div class="item">
               <span class="keyword">JS</span>
-              <span class="progress"><i style="width: 70%"></i></span>
+              <span class="progress"><i style="width: 85%;"></i></span>
             </div>
             <div class="item">
               <span class="keyword">Vue</span>
-              <span class="progress"><i style="width: 50%"></i></span>
+              <span class="progress"><i style="width: 75%;"></i></span>
             </div>
             <div class="item">
               <span class="keyword">React</span>
-              <span class="progress"><i style="width: 60%"></i></span>
+              <span class="progress"><i style="width: 65%;"></i></span>
             </div>
             <div class="item">
               <span class="keyword">Node.js</span>
-              <span class="progress"><i style="width: 40%"></i></span>
+              <span class="progress"><i style="width: 50%;"></i></span>
             </div>
           </div>
         </section>
@@ -231,13 +239,7 @@
             </div>
             <div class="item">
               <svg><use xlink:href="#icon-github" /></svg>
-              <span
-                ><a
-                  href="https://github.com/Glen-Ni?tab=repositories"
-                  target="view_window"
-                  >Glen-Ni</a
-                ></span
-              >
+              <span><a href="https://github.com/Glen-Ni?tab=repositories" target="view_window">Glen-Ni</a></span>
             </div>
           </div>
         </section>
@@ -257,7 +259,10 @@
           <h2>关于我</h2>
           <div class="about">
             <p>
-              一年半前端开发经验，熟悉<b>JavaScript</b>语言，较为熟悉<b>Vue</b>和<b>React</b>框架，熟悉<b>模块化、工程化</b>开发流程，熟练使用<b>ES6</b>写代码，熟悉<b>Node.js</b>开发，有<b>移动端</b>开发经验。
+              两年多前端开发经验，熟悉<b>JavaScript</b>语言，较为熟悉<b>Vue</b>和<b>React</b>框架，熟悉<b>模块化、工程化</b>开发流程，熟练使用<b>ES6</b>写代码，了解<b>Node.js</b>开发，有<b>移动端</b>开发经验。
+            </p>
+            <p>
+              可以独立开发页面应用，擅长做好用户体验。
             </p>
             <p>
               英语水平良好，CET-6 507，TOEFL 96(满分120)，GRE 320(满分340)。
@@ -265,7 +270,33 @@
           </div>
         </section>
         <section>
-          <h2>项目经历</h2>
+          <h2>个人经历</h2>
+          <div class="history school">
+            <h3>毕业于江南大学（本一211） 2014 <span>专业排名前20%</span></h3>
+          </div>
+          <div class="history">
+            <h3>南通中国人寿 2015~2016</h3>
+          </div>
+          <div class="history">
+            <h3>南通润杰包装 2016~2019.8</h3>
+            <ul>
+              <li>工作内容除了维护公司网页之外，还有客户沟通、安排生产、票据开具、设备维护管理等</li>
+            </ul>
+          </div>
+          <div class="history">
+            <h3>南通医联电子商务有限公司 2019.9~至今</h3>
+            <ul>
+              <li>公司做政府和医院的医疗项目;</li>
+              <li>
+                前4个月作为公司唯一前端，主要对老项目(Bootstrap +
+                jQuery)，包括3个pc端和一个移动端，进行维护和添加一些新功能。做过不少复杂功能，比如针对多个医疗信息表单中多次用到的个人基本信息，写过带缓存的jQuery插件;
+              </li>
+              <li>之后作为主力前端，将老项目用Vue + Element UI + less改写，基础和复杂功能由我完成，包括登录登出、根据登录权限获取路由生成菜单、人员管理、行政区域管理等。</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>个人项目</h2>
           <div class="project">
             <h3>番茄土豆(React、TypeScript)</h3>
             <ul>
@@ -275,20 +306,18 @@
               <li>
                 技术栈：React、React-Redux、TypeScript、AntDesign、Scss、Axios
               </li>
+              <li>项目源码：<a href="https://github.com/Glen-Ni/pomotodo-app" target="view_window">github.com/Glen-Ni/pomotodo-app</a></li>
+              <li>项目预览：<a href="https://glen-ni.github.io/pomotodo-app" target="view_window">点击查看</a></li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>番茄土豆微信小程序</h3>
+            <ul>
               <li>
-                项目源码：<a
-                  href="https://github.com/Glen-Ni/pomotodo-app"
-                  target="view_window"
-                  >github.com/Glen-Ni/pomotodo-app</a
-                >
+                项目介绍：上面React项目的微信小程序版。
               </li>
-              <li>
-                项目预览：<a
-                  href="https://glen-ni.github.io/pomotodo-app"
-                  target="view_window"
-                  >点击查看</a
-                >
-              </li>
+              <li>项目施工中······</li>
+              <li>项目源码：<a href="https://github.com/Glen-Ni/pomotodo-WechatMp" target="view_window">github.com/Glen-Ni/pomotodo-WechatMp</a></li>
             </ul>
           </div>
           <div class="project">
@@ -303,20 +332,8 @@
               <li>
                 后端技术栈：Node.js、Express、MySQL、RESTful风格API
               </li>
-              <li>
-                项目源码：<a
-                  href="https://github.com/Glen-Ni/frontend-blog-vue"
-                  target="view_window"
-                  >github.com/Glen-Ni/frontend-blog-vue</a
-                >
-              </li>
-              <li>
-                项目预览：<a
-                  href="http://blog.ntrjbz.club/"
-                  target="view_window"
-                  >点击查看</a
-                >
-              </li>
+              <li>项目源码：<a href="https://github.com/Glen-Ni/frontend-blog-vue" target="view_window">github.com/Glen-Ni/frontend-blog-vue</a></li>
+              <li>项目预览：<a href="http://blog.ntrjbz.club/" target="view_window">点击查看</a></li>
             </ul>
           </div>
           <div class="project">
@@ -328,20 +345,8 @@
               <li>
                 技术栈：Vue、Vue-Router、ES6、Stylus
               </li>
-              <li>
-                项目源码：<a
-                  href="https://github.com/Glen-Ni/eleme-mobile-mock"
-                  target="view_window"
-                  >github.com/Glen-Ni/eleme-mobile-mock</a
-                >
-              </li>
-              <li>
-                项目预览：<a
-                  href="http://eleme.ntrjbz.club/"
-                  target="view_window"
-                  >点击查看(请用移动端查看)</a
-                >
-              </li>
+              <li>项目源码：<a href="https://github.com/Glen-Ni/eleme-mobile-mock" target="view_window">github.com/Glen-Ni/eleme-mobile-mock</a></li>
+              <li>项目预览：<a href="http://eleme.ntrjbz.club/" target="view_window">点击查看(请用移动端查看)</a></li>
             </ul>
           </div>
           <div class="project">
@@ -353,50 +358,26 @@
               <li>
                 技术栈：jQuery
               </li>
-              <li>
-                项目源码：<a
-                  href="https://github.com/Glen-Ni/music-player-v2"
-                  target="view_window"
-                  >github.com/Glen-Ni/music-player-v2</a
-                >
-              </li>
-              <li>
-                项目预览：<a
-                  href="https://glen-ni.github.io/music-player-v2/"
-                  target="view_window"
-                  >点击查看(请横屏查看)</a
-                >
-              </li>
+              <li>项目源码：<a href="https://github.com/Glen-Ni/music-player-v2" target="view_window">github.com/Glen-Ni/music-player-v2</a></li>
+              <li>项目预览：<a href="https://glen-ni.github.io/music-player-v2/" target="view_window">点击查看(请横屏查看)</a></li>
             </ul>
           </div>
           <div class="project">
             <h3>其他项目</h3>
             <p>
-              <a href="https://github.com/Glen-Ni" target="view_window"
-                >github.com/Glen-Ni</a
-              >
+              <a href="https://github.com/Glen-Ni" target="view_window">github.com/Glen-Ni</a>
             </p>
           </div>
         </section>
-        <section>
-          <h2>个人经历</h2>
-          <div class="history school">
-            <h3>毕业于江南大学 2014 <span>专业排名前20%</span></h3>
-          </div>
-          <div class="history">
-            <h3>南通中国人寿 2015~2016</h3>
-          </div>
-          <div class="history">
-            <h3>南通润杰包装 2016~2019</h3>
-          </div>
-        </section>
+
         <section>
           <h2>自我评价</h2>
           <ul>
-            <li>自学能力强，乐于接触和学习新鲜事物，善于知识总结梳理；</li>
-            <li>乐于分享，团队精神，有责任感，踏实严谨；</li>
-            <li>英语水平不错，看英文文档没压力；</li>
-            <li>学过设计、排版，审美良好；</li>
+            <li>自学能力强，能借助官方文档等网络资源快速上手新技术；</li>
+            <li>纯自学前端技术，并在工作实践应用良好；</li>
+            <li>乐于分享，团队精神，有责任感，踏实严谨，有上进心；</li>
+            <li>英语水平良好，看英文文档没压力；</li>
+            <li>学过设计、排版，审美良好，善于做好交互体验。</li>
             <li>比较好的抗压能力，能适应一定强度的工作。</li>
           </ul>
         </section>
