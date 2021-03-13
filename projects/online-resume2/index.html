@@ -11,7 +11,7 @@
         padding: 0;
         line-height: 1.5;
         font-size: 14px;
-        font-family: "Arial";
+        font-family: 'Arial';
         color: #555;
       }
       body {
@@ -27,7 +27,8 @@
         margin: 0 auto;
         margin-top: 10px;
         margin-bottom: 10px;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16),
+          0 2px 10px 0 rgba(0, 0, 0, 0.12);
       }
 
       header {
@@ -80,7 +81,8 @@
         margin-bottom: 10px;
       }
       section h3 {
-        padding-bottom: 10px;
+        padding-bottom: 6px;
+        font-size: 15px;
       }
       section ul {
         padding-bottom: 16px;
@@ -88,6 +90,9 @@
       }
       section li {
         line-height: 1.6;
+      }
+      section li span{
+        font-weight: 700;
       }
       .basic-info ul {
         list-style: none;
@@ -167,14 +172,14 @@
       }
     </style>
     <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?f5fa371c144df714d87bb07d2be03579";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+      // var _hmt = _hmt || [];
+      // (function () {
+      //   var hm = document.createElement('script');
+      //   hm.src = 'https://hm.baidu.com/hm.js?f5fa371c144df714d87bb07d2be03579';
+      //   var s = document.getElementsByTagName('script')[0];
+      //   s.parentNode.insertBefore(hm, s);
+      // })();
+    </script>
   </head>
   <body>
     <div class="layout" id="page">
@@ -186,17 +191,18 @@ var _hmt = _hmt || [];
       </header>
       <aside>
         <div class="avatar">
-          <img src="./images/portrait2m.jpg" alt="rua" />
+          <img src="./images/portrait4.jpg" alt="rua" />
         </div>
         <section>
           <h2>基础信息</h2>
           <div class="basic-info">
             <ul>
-              <li>年龄：28</li>
+              <li>年龄：29</li>
               <li>学历：江南大学本科(211)</li>
               <li>前端经验：两年半</li>
               <li>求职状态：在职-月内到岗</li>
-              <li>意向薪资：11000~14000</li>
+              <li>意向薪资：11k~14k</li>
+              <li>如果加班频繁或者非双休,14k+</li>
             </ul>
           </div>
         </section>
@@ -205,27 +211,27 @@ var _hmt = _hmt || [];
           <div class="skills">
             <div class="item">
               <span class="keyword">HTML</span>
-              <span class="progress"><i style="width: 85%;"></i></span>
+              <span class="progress"><i style="width: 90%"></i></span>
             </div>
             <div class="item">
               <span class="keyword">CSS</span>
-              <span class="progress"><i style="width: 80%;"></i></span>
+              <span class="progress"><i style="width: 90%"></i></span>
             </div>
             <div class="item">
               <span class="keyword">JS</span>
-              <span class="progress"><i style="width: 85%;"></i></span>
+              <span class="progress"><i style="width: 85%"></i></span>
             </div>
             <div class="item">
               <span class="keyword">Vue</span>
-              <span class="progress"><i style="width: 75%;"></i></span>
+              <span class="progress"><i style="width: 80%"></i></span>
             </div>
             <div class="item">
               <span class="keyword">React</span>
-              <span class="progress"><i style="width: 65%;"></i></span>
+              <span class="progress"><i style="width: 80%"></i></span>
             </div>
             <div class="item">
               <span class="keyword">Node.js</span>
-              <span class="progress"><i style="width: 50%;"></i></span>
+              <span class="progress"><i style="width: 60%"></i></span>
             </div>
           </div>
         </section>
@@ -246,7 +252,13 @@ var _hmt = _hmt || [];
             </div>
             <div class="item">
               <svg><use xlink:href="#icon-github" /></svg>
-              <span><a href="https://github.com/Glen-Ni?tab=repositories" target="view_window">Glen-Ni</a></span>
+              <span
+                ><a
+                  href="https://github.com/Glen-Ni?tab=repositories"
+                  target="view_window"
+                  >Glen-Ni</a
+                ></span
+              >
             </div>
           </div>
         </section>
@@ -268,18 +280,16 @@ var _hmt = _hmt || [];
             <p>
               两年多前端开发经验，熟练运用<b>JavaScript</b>、<b>HTML</b>、<b>CSS</b>，较为熟悉<b>Vue</b>和<b>React</b>框架，熟悉<b>模块化、工程化</b>开发流程，熟练使用<b>ES6</b>写代码，了解<b>Node.js</b>开发，有<b>移动端</b>开发经验。
             </p>
+            <p>可以独立开发页面应用，擅长做好用户体验。</p>
             <p>
-              可以独立开发页面应用，擅长做好用户体验。
-            </p>
-            <p>
-              英语水平良好，CET-6 507，TOEFL 96(满分120)，GRE 320(满分340)。
+              <b>英语水平良好</b>，CET-6(大学英语六级) 507，TOEFL 96(满分120)，GRE 320(满分340)。
             </p>
           </div>
         </section>
         <section>
           <h2>个人经历</h2>
           <div class="history school">
-            <h3>毕业于江南大学（本一211） 2014 <span>专业排名前20%</span></h3>
+            <h3>毕业于江南大学（本一211） 2014 <span>学院排名前10%</span></h3>
           </div>
           <div class="history">
             <h3>南通中国人寿 2015~2016</h3>
@@ -287,7 +297,12 @@ var _hmt = _hmt || [];
           <div class="history">
             <h3>南通润杰包装 2016~2019.9</h3>
             <ul>
-              <li>工作内容除了维护公司网页之外，还有客户沟通、安排生产、票据开具、设备维护管理等</li>
+              <li>
+                工作内容除了维护公司网页之外，还有客户沟通、安排生产、票据开具、设备维护管理等
+              </li>
+              <li>
+                在职自学前端技术
+              </li>
             </ul>
           </div>
           <div class="history">
@@ -296,87 +311,227 @@ var _hmt = _hmt || [];
               <li>公司做政府和医院的医疗项目;</li>
               <li>
                 前4个月作为公司唯一前端，主要对老项目(Bootstrap +
-                jQuery)，包括3个pc端和一个移动端，进行维护和添加一些新功能。做过不少复杂功能，比如针对多个医疗信息表单中多次用到的个人基本信息，写过带缓存的jQuery插件;
+                jQuery)，包括3个pc端和一个移动端，进行维护和添加一些新功能。做过不少复杂功能，例如针对多个医疗信息表单中多次用到的个人基本信息，本人写了一个带缓存的jQuery插件，很大的程度上精简了代码;
               </li>
-              <li>之后作为主力前端，将老项目用Vue + Element UI + Less改写，基础和复杂功能由我完成，包括登录登出、根据登录权限获取路由生成菜单、人员管理、行政区域管理等。</li>
+              <li>
+                之后作为主力前端，将老项目用Vue + Element UI +
+                Less改写，基础和复杂功能由本人完成，包括登录登出、根据登录权限获取路由生成菜单、人员管理、行政区域管理等。
+              </li>
             </ul>
           </div>
           <div class="history">
             <h3>京东城市（南通）有限公司 2020.7~至今</h3>
             <ul>
-              <li>智能城市、市域治理现代化项目;</li>
-              <li>
-                React、Leaflet、数据可视化。
-              </li>
-              <li>
-                负责大屏可视化项目和后台项目的前端开发。
-              </li>
+              <li>智能城市、市域治理现代化项目。</li>
+              <li>React、Leaflet、数据可视化。</li>
+              <li>参与多个项目，负责大屏可视化项目和后台项目的前端开发。</li>
             </ul>
           </div>
         </section>
-        
+
+        <section>
+          <h2>参与公司项目（部分）</h2>
+          <div class="project">
+            <h3>南通市域治理现代化——危化品后台全息档案</h3>
+            <ul>
+              <li>
+                <span>项目介绍：</span> 南通市的危化品企业、相关车辆以及运输的监管后台系统。危化品运单、车辆驻留、危化品企业时空数据分析等。
+              </li>
+              <li>
+                <span>个人主要贡献：</span> 企业图谱模块（G6）、首页改版、夜间驻留和异常路线地图（Leaflet）分析模块。
+              </li>
+              <li><span>技术栈：</span> React、MobX、Less、ES6、G6、Leaflet</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>南通市域治理现代化——危化品大屏</h3>
+            <ul>
+              <li>
+                <span>项目介绍：</span> 南通市的危化品大屏展示系统。用于在南通市域治理现代化指挥中心4楼大屏上展示。包括全量态势、运输地图、监测预警、企业地图四个板块。该项目已经发挥实际作用，危化品系统已经在南通市帮助发现和查处多家违规生产和违规运输企业，已有报道。
+              </li>
+              <li>
+                <span>个人主要贡献：</span> 地图marker优化；弹框优化；企业详情模块；一些轮播展示组件；企业3D模型展示优化（Cesium）等。
+              </li>
+              <li><span>技术栈：</span> React、MobX、Less、ES6、Cesium、Leaflet</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>南通市域治理现代化——监测预警中台项目</h3>
+            <ul>
+              <li>
+                <span>项目介绍：</span> 监测预警中台对涉及城市管理的一百多项预警项进行提醒、处置管理、事件在委办局的流转和处置跟踪。
+              </li>
+              <li>
+                <span>个人主要贡献：</span> 统计图表（ECharts）；动态表头表单模块预览和下载；手工录入预警表单；道路拥堵、人群聚集的地图展示（Leaflet）等。
+              </li>
+              <li><span>技术栈：</span> React、MobX、Less、ES6、Leaflet、ECharts</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>南通市域治理现代化——群租房大屏智能管理项目</h3>
+            <ul>
+              <li>
+                <span>项目介绍：</span> 群租房的大屏项目，通过物流和人员流动等大数据对疑似群租房的事件进行统计展示和预警提醒。本项目基于京东自研的大屏构建工具<b>（莫奈）</b>开发。该项目已在南通市公安局不是使用。
+              </li>
+              <li>
+                <span>个人主要贡献：</span> 部分统计组件（Echarts）；底图模块Marker展示切换交互（Leaflet）；
+              </li>
+              <li><span>技术栈：</span> React、Less、ES6、Leaflet</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>南通市域治理现代化——危化品后台产品化系统</h3>
+            <ul>
+              <li>
+                <span>项目介绍：</span> 北京京东科技牵头开发，吸取南通危化品后台项目的经验，意在作为一个成熟的危化品管理产品，推广到全国大城市使用。
+              </li>
+              <li>
+                <span>个人主要贡献：</span> 企业详情界面；时空数据分析模块（MapBox）；车辆轨迹动画等；知识库、运单界面等。
+              </li>
+              <li><span>技术栈：</span> React、MobX、Less、ES6</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>新版启东公共卫生平台政务端</h3>
+            <ul>
+              <li>
+                <span>项目介绍：</span> 新版启东公共卫生平台政务端，包括家庭医生、个人档案、慢病医疗、老年人管理、慢病医疗结算等模块。
+              </li>
+              <li>
+                <span>个人主要贡献：</span> 老项目为.net ASP方案, 本人将老项目用Vue + Element
+                UI +
+                Less改写，完成基础和复杂功能，包括登录登出、权限管理、人员管理、行政区域管理等。
+              </li>
+              <li><span>技术栈：</span> Vue、VueX、Scss</li>
+            </ul>
+          </div>
+        </section>
+
         <section>
           <h2>个人项目</h2>
+          <div class="project">
+            <h3>Vue3 UI库(Vue3 Vite) 仍在开发</h3>
+            <ul>
+              <li>
+                <span>项目介绍：</span> 基于Vue3
+                和构建工具Vite的一个简易UI库。Vue3学习练手。同时适配手机端。
+                还在开发中，已经有Button、Switch、Tabs、Dialog几个基础组件。
+              </li>
+              <li><span>技术栈：</span> Vue3、Vite、TypeScript、Scss、ES6</li>
+              <li>
+                <span>项目源码：</span> <a
+                  href="https://github.com/Glen-Ni/vue3wheels"
+                  target="view_window"
+                  >github.com/Glen-Ni/vue3wheels</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="project">
             <h3>番茄土豆(React、TypeScript)</h3>
             <ul>
               <li>
-                项目介绍：一个以番茄钟+Todolist为核心的效率工具。实现功能有注册登录登出、番茄计时记录工作、Todo列表增删改、数据统计等。
+                <span>项目介绍：</span> 一个以番茄钟+Todolist为核心的效率工具。实现功能有注册登录登出、番茄计时记录工作、Todo列表增删改、数据统计等。
               </li>
               <li>
-                技术栈：React、React-Redux、TypeScript、AntDesign、Scss、Axios
+                <span>技术栈：</span> React、React-Redux、TypeScript、AntDesign、Scss、Axios
               </li>
-              <li>项目源码：<a href="https://github.com/Glen-Ni/pomotodo-app" target="view_window">github.com/Glen-Ni/pomotodo-app</a></li>
-              <li>项目预览：<a href="https://glen-ni.github.io/pomotodo-app" target="view_window">点击查看</a></li>
-              <li>微信小程序版：正在施工中，源码 <a href="https://github.com/Glen-Ni/pomotodo-WechatMp" target="view_window">github.com/Glen-Ni/pomotodo-WechatMp</a></li>
+              <li>
+                <span>项目源码：</span> <a
+                  href="https://github.com/Glen-Ni/pomotodo-app"
+                  target="view_window"
+                  >github.com/Glen-Ni/pomotodo-app</a
+                >
+              </li>
+              <li>
+                <span>项目预览：</span><a
+                  href="https://glen-ni.github.io/pomotodo-app"
+                  target="view_window"
+                  >点击查看</a
+                >
+              </li>
+              <li>
+                <span>微信小程序版：</span>
+                <a
+                  href="https://github.com/Glen-Ni/pomotodo-WechatMp"
+                  target="view_window"
+                  >github.com/Glen-Ni/pomotodo-WechatMp</a
+                >
+              </li>
             </ul>
           </div>
           <div class="project">
             <h3>多人博客系统(Vue、Node.js)</h3>
             <ul>
               <li>
-                项目介绍：前后端分离的多人博客系统，包括前后端。实现功能有用户注册登录和登录状态管理发表话题，发表话题评论，和一些交互细节。
+                <span>项目介绍：</span> 前后端分离的多人博客系统，包括前后端。实现功能有用户注册登录和登录状态管理发表话题，发表话题评论，和一些交互细节。
+              </li>
+              <li><span>前端技术栈：</span> Vue2.0、自配Webpack、Bootstrap、Axios</li>
+              <li><span>后端技术栈：</span> Node.js、Express、MySQL、RESTful风格API</li>
+              <li>
+                <span>项目源码：</span> <a
+                  href="https://github.com/Glen-Ni/frontend-blog-vue"
+                  target="view_window"
+                  >github.com/Glen-Ni/frontend-blog-vue</a
+                >
               </li>
               <li>
-                前端技术栈：Vue2.0、自配Webpack、Bootstrap、Axios
+                <span>项目预览：</span><a href="http://blog.glenni.tk/" target="view_window"
+                  >点击查看</a
+                >
               </li>
-              <li>
-                后端技术栈：Node.js、Express、MySQL、RESTful风格API
-              </li>
-              <li>项目源码：<a href="https://github.com/Glen-Ni/frontend-blog-vue" target="view_window">github.com/Glen-Ni/frontend-blog-vue</a></li>
-              <li>项目预览：<a href="http://blog.glenni.tk/" target="view_window">点击查看</a></li>
             </ul>
           </div>
           <div class="project">
             <h3>饿了么商家页面(Vue)</h3>
             <ul>
               <li>
-                项目介绍：移动端单页面app，饿了么商家页面模仿。实现功能有商家、商品、评价展示；购物车功能；购物车添加动画等。不同于慕课网老教程使用Vue1.x，使用Vue2.0编写。
+                <span>项目介绍：</span> 移动端单页面app，饿了么商家页面模仿。实现功能有商家、商品、评价展示；购物车功能；购物车添加动画等。不同于慕课网老教程使用Vue1.x，使用Vue2.0编写。
+              </li>
+              <li><span>技术栈：</span> Vue、Vue-Router、ES6、Stylus</li>
+              <li>
+                <span>项目源码：</span> <a
+                  href="https://github.com/Glen-Ni/eleme-mobile-mock"
+                  target="view_window"
+                  >github.com/Glen-Ni/eleme-mobile-mock</a
+                >
               </li>
               <li>
-                技术栈：Vue、Vue-Router、ES6、Stylus
+                <span>项目预览：</span><a href="http://eleme.glenni.tk/" target="view_window"
+                  >点击查看(请用移动端查看)</a
+                >
               </li>
-              <li>项目源码：<a href="https://github.com/Glen-Ni/eleme-mobile-mock" target="view_window">github.com/Glen-Ni/eleme-mobile-mock</a></li>
-              <li>项目预览：<a href="http://eleme.glenni.tk/" target="view_window">点击查看(请用移动端查看)</a></li>
             </ul>
           </div>
           <div class="project">
             <h3>大屏响应式播放器(jQuery)</h3>
             <ul>
               <li>
-                项目介绍：适配横屏、大屏幕(例如电视)的响应式音乐电台播放器。实现功能有音乐播放和控制，电台频道列表，歌词及歌词特效等。适配宽屏，元素宽高用vh实现。组件化，使用EventCenter在频道与播放组件间传输数据。
+                <span>项目介绍：</span> 适配横屏、大屏幕(例如电视)的响应式音乐电台播放器。实现功能有音乐播放和控制，电台频道列表，歌词及歌词特效等。适配宽屏，元素宽高用vh实现。组件化，使用EventCenter在频道与播放组件间传输数据。
+              </li>
+              <li><span>技术栈：</span> jQuery</li>
+              <li>
+                <span>项目源码：</span> <a
+                  href="https://github.com/Glen-Ni/music-player-v2"
+                  target="view_window"
+                  >github.com/Glen-Ni/music-player-v2</a
+                >
               </li>
               <li>
-                技术栈：jQuery
+                <span>项目预览：</span><a
+                  href="https://glen-ni.github.io/music-player-v2/"
+                  target="view_window"
+                  >点击查看(请横屏查看)</a
+                >
               </li>
-              <li>项目源码：<a href="https://github.com/Glen-Ni/music-player-v2" target="view_window">github.com/Glen-Ni/music-player-v2</a></li>
-              <li>项目预览：<a href="https://glen-ni.github.io/music-player-v2/" target="view_window">点击查看(请横屏查看)</a></li>
             </ul>
           </div>
           <div class="project">
             <h3>其他项目</h3>
             <p>
-              <a href="https://github.com/Glen-Ni" target="view_window">github.com/Glen-Ni</a>
+              <a href="https://github.com/Glen-Ni" target="view_window"
+                >github.com/Glen-Ni</a
+              >
             </p>
           </div>
         </section>
